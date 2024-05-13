@@ -1,12 +1,28 @@
-import { Link } from 'react-router-dom';
+
+import React, { useState, useEffect } from 'react';
 
 export default function BuyPage() {
-    return (
+  const [bikes, setbikes] = useState([]);
+  useEffect (()=>{
+    async function getbikes(){
+      // const bikes = await bikesAPI.getAllForUser();
+     setbikes(bikes)
+     console.log(bikes);
+    }
+    getbikes();
+  }, [])
+
+  return (
+    <>
+      <h1>Bike List</h1>
+    {
+      bikes.map(o => (
         <div>
-      <h1>Buy</h1>
-  
-   
-    
-     </div> 
-    );
-  }
+          <p>bike number: {o._id}</p>
+          <p>total price: {o.totalPrice}</p>
+        </div>
+      ))
+    }
+    </>
+);
+}
