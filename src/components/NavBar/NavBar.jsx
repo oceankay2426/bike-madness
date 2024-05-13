@@ -12,7 +12,7 @@ export default function NavBar({ user, setUser }) {
       <Link to="/orders/sell">Sell</Link>
       &nbsp; | &nbsp;
       <Link to="/orders/buy">Buy</Link>
-      &nbsp;&nbsp;
+      &nbsp; | &nbsp;
       <Link to="/orders/wish">WishList</Link>
       &nbsp; | &nbsp;
       <Link to="/orders">Cart</Link>

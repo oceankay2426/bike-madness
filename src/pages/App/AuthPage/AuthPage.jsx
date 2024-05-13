@@ -1,5 +1,5 @@
 export default function AuthPage() {
     return (
-        <h1>AuthPage</h1>
+        <h1>Bike Madness Login</h1>
     )
 }
