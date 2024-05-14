@@ -1,11 +1,11 @@
-
+import * as bikesAPI from '../../utilities/bike-api';
 import React, { useState, useEffect } from 'react';
 
 export default function BuyPage() {
   const [bikes, setbikes] = useState([]);
   useEffect (()=>{
     async function getbikes(){
-      // const bikes = await bikesAPI.getAllForUser();
+    const bikes = await bikesAPI.getAllForUser();
      setbikes(bikes)
      console.log(bikes);
     }

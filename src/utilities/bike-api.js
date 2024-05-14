@@ -1,9 +1,10 @@
 import sendRequest from "./send-request";
-export default function WishListPage() {
-  return (
-    <h1>WishList</h1>
-  );
-}
+const BASE_URL = '/api/bikes';
+
 export async function add(bike) {
   return sendRequest(BASE_URL, 'POST',  bike );
+}
+
+export async function getAll() {
+  return sendRequest(BASE_URL)
 }
